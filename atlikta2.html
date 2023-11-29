@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Vilniaus bankas</title>
+    </head>
+    <body>
+        <section class="main">
+            <section class="screen">
+                <h3>Operacija atlikta sėkmingai</h3>
+                <section class="operations">
+                    <section class="o0">
+                        <a>Jūsų išsiimta suma: 
+                            <span id="displayedAmount"></span> EUR
+                        </a>
+                    </section>
+                    <a href="bankomatas.html" target="_top" class="o1">ATLIKTI KITĄ OPERACIJĄ</a>
+                    <a href="baigti.html" target="_top" class="o2">BAIGTI DARBĄ</a>
+                </section>
+            </section>
+        </section>
+
+        <script>
+            var savedAmount = sessionStorage.getItem("savedAmount");
+            document.getElementById("displayedAmount").innerText = savedAmount;
+        </script>
+    </body>
+</html>

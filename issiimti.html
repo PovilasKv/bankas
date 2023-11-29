@@ -1,0 +1,33 @@
+<!-- First Page (bankomatas.html) -->
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Vilniaus bankas</title>
+    </head>
+    <body>
+        <section class="main">
+            <section class="screen">
+                <h3>Įveskite norimą sumą</h3>
+                <h4>Įvedę sumą spauskite PATVIRTINTI</h4>
+                <section class="operations">
+                    <section class="o0">
+                        <label>Norima suma: 
+                            <input type="text" name="issiimti" id="issiimti-input"> EUR
+                        </label>
+                    </section>
+                    <a onclick="save()" class="o1" href="atlikta2.html" target="_top">PATVIRTINTI</a>
+                    <a href="bankomatas.html" target="_top" class="o2">ATŠAUKTI</a>
+                </section>
+            </section>
+        </section>
+
+        <script>
+            function save() {
+                var inputValue = document.getElementById("issiimti-input").value;
+                sessionStorage.setItem("savedAmount", inputValue);
+            }
+        </script>
+    </body>
+</html>
